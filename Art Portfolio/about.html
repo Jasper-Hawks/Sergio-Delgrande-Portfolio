@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet"  href="about.css">
+    <title>About | Sergio Delgrande</title>
+</head>
+<body>
+    <nav>
+        <div class="hamburger" onclick="transformFunc(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <ul>
+            <div id="links">
+                <li id = "li"><a href = "index.html">Home</a></li>
+                <li id = "li1"><a href = "work.html">Work</a></li>
+                <li id = "li2"><a href = "resume.html">Resume</a></li>
+                <li id = "li3"><a href = "about.html">About</a></li>
+            </div>
+        </ul>
+    </nav>
+    <img src="Images/123 polysccape 2.jpg" alt="1"class = "artImage">
+    <img src="Images/123. AstrologyProject.jpg" alt="2"class = "artImage">
+    <img src="Images/123. halloweenenenen.jpg" alt="3"class = "artImage">
+    <img src="Images/google doodle v1.jpg" alt="4"class = "artImage">
+    <img src="Images/Independent project I FINAL (no extra layers).jpg" alt="5"class = "artImage">
+    <div class="tint"></div>
+    <div class="posterText">
+    <h1>SERGIO<br>DELGRANDE</h1>
+    <h2>About</h2>
+    <h3>My name is Sergio Delgrande and I’m currently a freshman at Northern Arizona Arizona in pursuit of a major in Visual Communications. I have a passion for creating digital artwork and images on a computer with Adobe programs such as Photoshop or Illustrator, ranging from abstract works to more practical posters. So far, I have taken four years of Computer Graphics at Sandia High School, learning many different things in the process. However, I currently hope to learn even more as I delve deeper into using Illustrator and Photoshop along with other programs as well. Overall I enjoy creating work no matter what shape and aim for it to be my profession.</h3>
+    </div>
+    <script>
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("artImage");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 5 seconds
+        }
+        function transformFunc(x) {
+
+            x.classList.toggle("change");
+            var p = document.getElementById("links");
+
+            if (p.style.display === "block"){
+                p.style.display = "none"
+            }else{
+
+                p.style.display = "block"
+
+            }
+            
+
+        }
+    </script>
+</body>
+</html>
